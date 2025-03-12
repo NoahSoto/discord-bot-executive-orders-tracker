@@ -23,6 +23,15 @@ go build -o executive-order-tracker-binary main.go
 ./executive-order-tracker-binary
 ```
 
+Then within the `main.go` file, add your discord bot token:
+
+```go
+func main() {
+	bot.BotToken = "YOUR BOT'S TOKEN GOES HERE!"
+	bot.Run() // call the run function of bot/bot.go
+}
+```
+
 Note that the executable option will consume more storage but require less headroom, as well as require a rebuild every time the main source code is updated.
 
 # Discord Usage
